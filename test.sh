@@ -2,7 +2,7 @@
 try() {
     expected="$1"
     input="$2"
-    
+
     ./9cc "$input" > tmp.s
     gcc -o tmp tmp.s
     ./tmp
@@ -15,6 +15,10 @@ try() {
         exit 1
     fi
 }
+
+mkdir -p build
+cd build/
+cmake .. && make clean && make
 
 try 0 0
 try 42 42

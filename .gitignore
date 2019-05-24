@@ -1,4 +1,2 @@
 .vscode/
-9cc
-tmp.s
-tmp
+build/
